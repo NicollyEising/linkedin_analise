@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidatos para Vagas - LinkedIn Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Candidatos para Vagas - LinkedIn Analyzer</h1>
+        </header>
+
+        <div class="form-section">
+            <h2>Descreva a Vaga</h2>
+            <form id="jobForm">
+                <label for="escolaridade">Grau de Escolaridade:</label>
+                <input type="text" id="escolaridade" value="Bacharel">
+
+                <label for="conhecimentos_obrigatorios">Conhecimentos Obrigatórios (separados por vírgula):</label>
+                <textarea id="conhecimentos_obrigatorios">Java</textarea>
+
+                <label for="conhecimentos_desejados">Conhecimentos Desejados (separados por vírgula):</label>
+                <textarea id="conhecimentos_desejados">React</textarea>
+
+                <label for="tempo_experiencia">Tempo de Experiência (anos):</label>
+                <input type="number" id="tempo_experiencia" min="0" value="0" step="0.1">
+
+                <label for="outras_observacoes">Outras Observações (palavras-chave separadas por vírgula):</label>
+                <textarea id="outras_observacoes"></textarea>
+
+                <label for="csvFile">Upload Dataset de Candidatos (CSV com colunas 'slug' e 'name'):</label>
+                <input type="file" id="csvFile" accept=".csv" required>
+
+                <button type="button" id="loadCsv">Carregar Dataset</button>
+                <button type="button" id="analyzeBtn" disabled>Analisar Todos os Perfis e Calcular Aderência</button>
+            </form>
+        </div>
+
+        <div id="progress" class="progress-section" style="display: none;">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="progressText">Processando...</p>
+        </div>
+
+
+        <div id="results" style="display:none;">
+            <h2>Top 5 Candidatos</h2>
+            <div id="top5List" class="top5-list"></div>
+        </div>
+
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
