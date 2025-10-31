@@ -7,8 +7,6 @@
 O **LinkedIn Analyzer** é uma aplicação Node.js com interface web desenvolvida para análise de candidatos com base em descrições de vagas.
 A ferramenta permite o envio de um arquivo CSV contendo perfis de candidatos e calcula a aderência de cada perfil conforme os critérios definidos pelo recrutador.
 
-A aplicação combina processamento local em JavaScript com chamadas a uma API externa, apresentando visualmente os resultados e permitindo o download do ranking de candidatos em formato CSV.
-
 ---
 
 
