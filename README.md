@@ -41,6 +41,3 @@ http://localhost:3000
 
 4. Aguarde o processamento.
    O sistema exibirá os **Top 5 candidatos**.
-
-Este projeto é disponibilizado para fins acadêmicos e de demonstração.
-A utilização ou redistribuição em ambiente de produção deve incluir os devidos créditos ao autor original.
